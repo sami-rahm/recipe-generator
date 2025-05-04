@@ -1,5 +1,6 @@
 import os
 from flask import Flask, request, jsonify, render_template
+from flask import send_from_directory
 import httpx
 from dotenv import load_dotenv
 
@@ -24,7 +25,9 @@ BASE_URL = "https://api.groq.com/openai/v1/chat/completions"
 @app.route('/')
 def index():
     return render_template('index.html')
-
+@app.route('/ads.txt')
+def ads_txt():
+    return send_from_directory('static', 'ads.txt')
 @app.route('/generate-recipe', methods=['POST'])
 def generate_recipe():
     data = request.get_json()

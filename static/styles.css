@@ -1,0 +1,95 @@
+/* General body styles */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f9;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;  /* Allow content to scroll */
+    min-height: 100vh;  /* Ensure the body takes full height */
+    overflow-x: hidden;  /* Prevent horizontal scroll */
+}
+
+/* Container for the content */
+.container {
+    background-color: #fff;
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    max-width: 600px;  /* Maximum width of the container */
+    width: 100%;  /* Full width until the max-width */
+    text-align: center;
+    overflow-y: auto;  /* Allow vertical scrolling */
+    max-height: 90vh;  /* Prevent container from taking full height */
+}
+
+/* Heading styling */
+h1 {
+    color: #333;
+    font-size: 32px;
+    margin-bottom: 20px;  /* Spacing below the heading */
+}
+
+h2 {
+    color: #555;
+    font-size: 24px;
+    margin-top: 20px;  /* Spacing above the recipe output */
+}
+
+/* Input field styling */
+input[type="text"] {
+    padding: 12px;
+    width: 80%;
+    border: 2px solid #ddd;
+    border-radius: 4px;
+    margin-bottom: 20px;  /* More space between input and button */
+    font-size: 16px;
+    box-sizing: border-box;  /* Include padding in width calculation */
+}
+
+/* Button styling */
+button {
+    padding: 12px 20px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s ease;
+}
+
+/* Button hover effect */
+button:hover {
+    background-color: #0056b3;
+}
+
+/* Recipe output section */
+#recipe {
+    margin-top: 20px;
+    padding: 20px;
+    background-color: #e9ecef;
+    border-radius: 4px;
+    text-align: left;
+    font-size: 18px;
+    color: #333;
+    white-space: pre-wrap;  /* Allows text to wrap correctly */
+    max-height: 400px;  /* Limit recipe output height */
+    overflow-y: auto;  /* Enable scrolling for long recipes */
+}
+
+/* Small screen adjustments (Mobile responsiveness) */
+@media (max-width: 600px) {
+    .container {
+        padding: 15px;  /* Reduce padding on smaller screens */
+    }
+
+    input[type="text"] {
+        width: 100%;  /* Make the input field take full width on small screens */
+    }
+
+    button {
+        width: 100%;  /* Make the button take full width on small screens */
+    }
+}

@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Recipe Generator</title>
+    <!-- Link to the CSS file in the static folder -->
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9562343589005056"
+     crossorigin="anonymous"></script>
+</head>
+<body>
+    <div class="container">
+        <h1>Recipe Generator</h1>
+        <label for="ingredient">Enter Ingredients:</label>
+        <input type="text" id="ingredient" placeholder="e.g., chicken, rice">
+        <button onclick="getRecipe()">Generate Recipe</button>
+        
+        <h2>Generated Recipe:</h2>
+        <div id="recipe"></div>
+    </div>
+
+    <!-- Link to the JS file in the static folder -->
+    <script src="{{ url_for('static', filename='script.js') }}"></script>
+</body>
+</html>
